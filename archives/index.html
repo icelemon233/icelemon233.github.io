@@ -30,7 +30,7 @@
   <style type="text/css">
     
     #container.show {
-      background: linear-gradient(200deg,#a0cfe4,#e8c37e);
+      background: linear-gradient(200deg,#ccc,#000);
     }
   </style>
   
@@ -58,7 +58,7 @@
       
 
 
-<div class="overlay" style="background: #88FFFF;"></div>
+<div class="overlay" style="background: #4d4d4d;"></div>
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
@@ -106,6 +106,14 @@
 				
 					<a class="cnblog" href="#" title="cnblog" target="_blank"><i class="icon-cnblog"></i></a>
 				
+					<a class="qq" href="http://wpa.qq.com/msgrd?v=3&uin=1399207061&site=qq&menu=yes" title="QQ" target="_blank"><i class="icon-qq"></i></a>
+				
+					<a class="weixin" href="#" title="wechat" target="_blank"><i class="icon-weixin"></i></a>
+				
+					<a class="bilibili" href="#" title="bilibili" target="_blank"><i class="icon-bilibili"></i></a>
+				
+					<a class="mail" href="mailto:1399207061@qq.com" title="NULL" target="_blank"><i class="icon-mail"></i></a>
+				
 			</div>
 		
 			
@@ -113,7 +121,7 @@
 			
 			
 			<div>
-				<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="240" height="86" src="//music.163.com/outchain/player?type=2&id=1369798757&auto=1&height=66"></iframe>
+        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=1369798757&auto=1&height=66"></iframe>
 			</div>
 			
 				
@@ -121,7 +129,7 @@
 			
 		
 		</nav>
-	</header>		
+	</header>
 </div>
 
     </div>
@@ -135,7 +143,7 @@
       
       
 <nav id="mobile-nav">
-  	<div class="overlay js-overlay" style="background: #88FFFF"></div>
+  	<div class="overlay js-overlay" style="background: #4d4d4d"></div>
 	<div class="btnctn js-mobile-btnctn">
   		<div class="slider-trigger list" q-on="click: openSlider(e)"><i class="icon icon-sort"></i></div>
 	</div>
@@ -170,6 +178,14 @@
 						<a class="jianshu" target="_blank" href="/false" title="jianshu"><i class="icon-jianshu"></i></a>
 			        
 						<a class="cnblog" target="_blank" href="#" title="cnblog"><i class="icon-cnblog"></i></a>
+			        
+						<a class="qq" target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=1399207061&site=qq&menu=yes" title="QQ"><i class="icon-qq"></i></a>
+			        
+						<a class="weixin" target="_blank" href="#" title="wechat"><i class="icon-weixin"></i></a>
+			        
+						<a class="bilibili" target="_blank" href="#" title="bilibili"><i class="icon-bilibili"></i></a>
+			        
+						<a class="mail" target="_blank" href="mailto:1399207061@qq.com" title="NULL"><i class="icon-mail"></i></a>
 			        
 				</div>
 			</nav>
@@ -216,7 +232,7 @@
     <header class="archive-article-header">
       	<div class="article-meta">
 	      	
-<a href="/2020/01/25/hello-world/" class="archive-article-date">
+<a href="/undefined/abbrlink.html" class="archive-article-date">
         <time datetime="2020-01-25T07:58:16.213Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-25</time>
 </a>
 
@@ -225,7 +241,7 @@
   
     <h1 itemprop="name">
 	
-	  <a class="archive-article-title" href="/2020/01/25/hello-world/" target="_blank">Hello World</a>
+	  <a class="archive-article-title" href="/undefined/abbrlink.html" target="_blank">Hello World</a>
   
     </h1>
   
@@ -264,7 +280,7 @@
       	</div>
     </div>
   </div>
-  
+
   
 	<script src="/lib/busuanzi.pure.js"></script>
 	
@@ -272,13 +288,32 @@
   
 	
 	<span id="busuanzi_container_site_pv" style="display:none">
-		本站总访问量<span id="busuanzi_value_site_pv"></span>次	
+		本站总访问量<span id="busuanzi_value_site_pv"></span>次
 	        <span class="post-meta-divider" >|</span>
 	</span>
   	<span id="busuanzi_container_site_uv" style='display:none'>
   		本站访客数<span id="busuanzi_value_site_uv"></span>人
   	</span>
   
+
+  <span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+<script>
+	var now = new Date();
+	function createtime() {
+		var grt= new Date("11/23/2018 20:00:00");//此处修改你的建站时间或者网站上线时间
+		now.setTime(now.getTime()+250);
+		days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+		hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+		if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+		mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+		seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+		snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+		document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 ";
+		document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+	}
+	setInterval("createtime()",250);
+</script>
+
 </footer>
 
     </div>
